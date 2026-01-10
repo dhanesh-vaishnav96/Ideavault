@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DV_NotesStore</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Welcome to IdeaVault</h1>
+    <p>Organize your thoughts. Save your ideas.</p>
+</header>
+
+<!-- ADD NOTE -->
+<section id="input-box">
+    <form action="/add-note" method="post">
+        <input type="text" name="title" class="Add-Title-2" placeholder="Add Title..." required>
+        <br><br>
+
+        <textarea name="description" rows="6" class="Add-Title-2" placeholder="Write your note here..." required></textarea>
+        <br><br>
+
+        <button type="submit" class="btn-outline-success">Add Note</button>
+    </form>
+</section>
+
+<!-- SEARCH -->
+<section class="container-fluid">
+    <form action="/search" method="get">
+        <input type="search" name="query" class="form-control" placeholder="Search by title" required>
+        <button class="btn-outline-success">Search</button>
+    </form>
+</section>
+
+<!-- SHOW ALL -->
+<section class="container-fluid">
+    <form action="/notes" method="get">
+        <button class="btn-outline-success">Show All</button>
+    </form>
+</section>
+
+<!-- NOTES LIST -->
+<section class="container-fluid">
+
+{% if notes|length == 0 %}
+    <p>No Notes found...</p>
+{% else %}
+    {% for note in notes %}
+        <div class="box" style="border:2px solid purple; padding:15px; border-radius:20px; width:300px;">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.description }}</p>
+            <small>ID: {{ note._id }}</small>
+
+            <!-- EDIT -->
+            <form action="/edit" method="get">
+                <input type="hidden" name="note_id" value="{{ note._id }}">
+                <button class="btn-outline-success">Edit</button>
+            </form>
+
+            <!-- DELETE -->
+            <form action="/delete" method="post">
+                <input type="hidden" name="note_id" value="{{ note._id }}">
+                <button class="btn-outline-success">Delete</button>
+            </form>
+        </div>
+    {% endfor %}
+{% endif %}
+
+</section>
+</body>
+</html>

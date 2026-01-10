@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Note</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Edit Note</h1>
+    <p>Update your idea</p>
+</header>
+
+<section id="input-box">
+
+<form action="/update" method="post">
+
+    <!-- ID -->
+    <input type="hidden" name="note_id" value="{{ note._id }}">
+
+    <!-- TITLE -->
+    <input
+        type="text"
+        name="title"
+        class="Add-Title-2"
+        value="{{ note.title }}"
+        required
+    >
+    <br><br>
+
+    <!-- DESCRIPTION -->
+    <textarea
+        name="description"
+        rows="6"
+        class="Add-Title-2"
+        required
+    >{{ note.description }}</textarea>
+    <br><br>
+
+    <button type="submit" class="btn-outline-success">
+        Update Note
+    </button>
+
+</form>
+
+</section>
+
+</body>
+</html>

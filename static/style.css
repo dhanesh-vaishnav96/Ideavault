@@ -1,0 +1,131 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+background-color: rgb(0, 0, 39);
+color: yellow;
+}
+
+header{
+display: inline;
+}
+/* MAIN HEADING */
+h1 {
+background-color: rgb(56, 0, 70);
+padding: 12px 40px;
+color: rgb(242, 255, 123);
+border-radius: 32px;
+text-align: center;
+margin: 20px auto;
+width: fit-content;
+
+}
+
+/* SUB HEADING */
+p {
+color:rgb(242, 255, 123);
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* INPUT BOX */
+#input-box {
+border: 3px solid rgb(126, 10, 161);
+margin: 29px auto;
+padding: 25px;
+border-radius: 32px;
+width: 80%;
+max-width: 900px;
+}
+
+/* FORM */
+#input-box form {
+background-color: rgb(0, 9, 58);
+display: flex;
+flex-direction: column;
+padding: 25px;
+border-radius: 32px;
+}
+
+/* TITLE INPUT */
+.Add-Title-2 {
+border-radius: 32px;
+padding: 12px 20px;
+font-size: 16px;
+}
+
+/* TEXTAREA */
+textarea {
+border-radius: 20px;
+padding: 15px;
+font-size: 15px;
+border: 3px solid rgb(61, 1, 80);
+
+}
+
+
+/* BUTTON */
+.btn-outline-success {
+background-color: rgb(24, 84, 250);
+color: rgb(242, 255, 123);
+border-radius: 32px;
+padding: 10px 30px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+width: fit-content;
+margin: 9px 1px;
+}
+
+.btn-outline-success:hover {
+background-color: rgb(10, 60, 200);
+transform: scale(1.05);
+border: 2px solid rgb(126, 10, 161);
+}
+
+/* ACTION SECTION */
+.container-fluid {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 130px;
+list-style: none;
+flex-wrap: wrap;
+margin-bottom: 50px;
+}
+
+
+.form-control {
+border-radius: 32px;
+padding: 10px 20px;   
+width: 250px;       
+}
+
+
+form input:last-of-type{
+border: 3px solid rgb(61, 1, 80);
+}
+
+input::placeholder {
+color: rgb(94, 80, 0);
+padding: 1px 1px;
+}
+.form-control:focus,
+.Add-Title-2:focus {
+outline: none;          /* removes white outline */
+box-shadow: none;       /* removes glow (Chrome) */
+border: 2px solid rgb(126, 10, 161); /* your custom focus border */
+}
+
+.box{
+width: fit-content;
+border: 1px solid rgb(144, 24, 180);
+display: inline-block;
+padding: 10px;
+height: auto;
+min-height: 100px; 
+}
