@@ -44,20 +44,6 @@ This project demonstrates a **real backend with database integration**, making i
 
 ---
 
-
-## 📂 Project Structure
-```text
-project/
-│── main.py
-│── config/
-│── models/
-│── schema/
-│── templates/
-│── static/
-│── requirements.txt
-
----
-
 ## ⚙️ How It Works
 
 1. User submits a note from the browser  
