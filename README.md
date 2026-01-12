@@ -1,4 +1,4 @@
-# 📝 IdeaVault — Smart Notes Management System
+# 📝 IdeaVault — IdeasNotes Management System
 
 IdeaVault is a full-stack web application built with **FastAPI, MongoDB, and Jinja2** that allows users to create, search, edit, and manage notes in a clean and responsive interface.
 
