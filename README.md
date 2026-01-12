@@ -44,7 +44,9 @@ This project demonstrates a **real backend with database integration**, making i
 
 ---
 
+
 ## 📂 Project Structure
+```text
 project/
 │── main.py
 │── config/
